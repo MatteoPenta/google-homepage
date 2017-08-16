@@ -113,7 +113,6 @@ main {
   height: 44px;
   border-radius: 2px;
   border: none;
-  transition: box-shadow .2s ease;
   position: relative;
 }
 
@@ -125,6 +124,10 @@ main {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 0 1px rgba(0, 0, 0, .08);
   font-size: 16px;
   padding: 4px 15px;
+
+  -webkit-transition: box-shadow .2s ease;
+     -moz-transition: box-shadow .2s ease;
+          transition: box-shadow .2s ease;
 }
 
 .searchbox input:focus {
@@ -162,6 +165,11 @@ main button {
   min-width: 54px;
   margin: 9px 2px;
   padding: 0 16px;
+}
+
+main button:focus {
+  border: 1px solid #4d90fe;
+  outline: none;
 }
 
 main button:hover {
@@ -210,7 +218,6 @@ footer ul a {
   color: #666;
   float: left;
   padding: 12px 15px;
-  /*background: red;*/
 }
 
 footer ul a:hover {
