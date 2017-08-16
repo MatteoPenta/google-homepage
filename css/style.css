@@ -7,18 +7,87 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.sprite {
+  background-image: url(../res/spritesheet.png);
+  opacity: .55;
+}
+
  /*-- HEADER -- */
 header {
   position: absolute;
   width: 100%;
+}
 
+.navbar {
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 15px 0 0;
+}
+
+.navbar li:nth-child(3) {
+  display: inline-block;
+  background-size: 528px 68px;
+  background-position: -132px -38px;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.navbar li:nth-child(3):hover {
+  opacity: .85;
+}
+
+.navbar li a {
+  display: block;
+  font-size: 13px;
+  font-weight: lighter;
+  font-family: arial, sans-serif;
+  line-height: 24px;
+  opacity: .75;
+}
+
+button.login {
+  width: auto;
+  height: auto;
+  font-size: 13px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 30px;
+  background: #4285f4;
+  background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+  border-radius: 3px;
+  margin-left: 10px;
+  padding: 0 12px;
+  border: none;
+}
+
+.navbar li a:hover {
+  text-decoration: underline;
+  opacity: .85;
 }
 
  /*-- MAIN -- */
 main {
   position: relative;
   top: 198px;
-  width: 484px;
+  max-width: 484px;
   text-align: center;
   margin: 0 auto;
 }
@@ -33,7 +102,6 @@ main {
 
 .searchbox {
   display: block;
-  width: 100%;
   max-width: 484px;
   height: 44px;
   border-radius: 2px;
@@ -74,7 +142,7 @@ main {
   cursor: pointer
 }
 
-button {
+main button {
   height: 36px;
   width: 150px;
   background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
@@ -89,7 +157,7 @@ button {
   padding: 0 16px;
 }
 
-button:hover {
+main button:hover {
   color: black;
   border: 1px solid rgba(68, 68, 68, .3);
   background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
@@ -98,4 +166,10 @@ button:hover {
 .buttons {
   margin-top: 23px;
   display: block;
+}
+
+@media (min-width: 1250px) {
+  main, .searchbox{
+    max-width: 548px;
+  }
 }
